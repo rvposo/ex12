@@ -4,6 +4,9 @@ Calular e escrever:
 A quantidade total de homens e mulheres e o percentual de cada.
 A média de peso das pessoas (somatório dos pesos de todas as pessoas pela quantidade de pessoas) o nome da pessoa mais alta. */
 
+using System.Runtime.InteropServices.Marshalling;
+using Microsoft.VisualBasic;
+
 namespace ex12;
 
 class Program
@@ -13,6 +16,8 @@ class Program
          int quantidadePessoas = 10;
          string nome = "";
          double altura = 0f;
+         int peso = 0;
+         char sexo = ' ';
 
 
 
@@ -24,8 +29,14 @@ class Program
             Console.WriteLine("Digite a altura: ");
             altura = Convert.ToDouble(Console.ReadLine());
 
-            
+            Console.WriteLine("Digite o seu peso: ");
+            peso = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Digite o seu sexo: 'M' ou 'F'");
+            sexo = Convert.ToChar(Console.ReadLine());
          }
+
+         
 
 
 
