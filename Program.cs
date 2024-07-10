@@ -13,17 +13,19 @@ class Program
 {
     static void Main(string[] args)
     {
-         int quantidadePessoas = 10;
+         int quantidadePessoas = 3;
          string nome = "";
          double altura = 0f;
          int peso = 0;
-         char sexo = ' ';
+         string sexo = "";
+         int quantidadeHomens = 0;
+         int quantidadeMulheres = 0;
 
 
 
-         for (int i = 0; i <= quantidadePessoas; i++)
+         for (int i = 1; i <= quantidadePessoas; i++)
          {
-            Console.WriteLine("Digite o nome da pessoa: ");
+            Console.WriteLine("Digite o nome da pessoa [i]: ");
             nome = Console.ReadLine();
 
             Console.WriteLine("Digite a altura: ");
@@ -33,13 +35,23 @@ class Program
             peso = Convert.ToInt32(Console.ReadLine());
 
             Console.WriteLine("Digite o seu sexo: 'M' ou 'F'");
-            sexo = Convert.ToChar(Console.ReadLine());
+            sexo = Console.ReadLine();
+            Console.WriteLine(sexo);
+
+          if (sexo == "M")
+          { 
+             quantidadeHomens += 1;
+
+          } else if (sexo == "F")
+          {
+             quantidadeMulheres += 1;
+          }
+        }
+
+            Console.WriteLine($"Quantidade de homens: {quantidadeHomens}");
+            Console.WriteLine($"Quantidade de mulheres: {quantidadeMulheres}");
+
          }
 
-         
-
-
-
-                 
-    }
+      
 }
