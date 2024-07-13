@@ -20,6 +20,7 @@ class Program
          string sexo = "";
          int quantidadeHomens = 0;
          int quantidadeMulheres = 0;
+         int somaPesos = 0;
 
 
 
@@ -45,6 +46,12 @@ class Program
           {
              quantidadeMulheres += 1;
           }
+           if (peso > 0)
+           {
+              somaPesos += peso;
+
+           }
+
         }
 
             double percentualHomens = (double)quantidadeHomens / (double)quantidadePessoas * 100;
@@ -57,6 +64,7 @@ class Program
             Console.WriteLine($"Quantidade de mulheres: {quantidadeMulheres}");
             Console.WriteLine($"Percentual de homens: {percentualHomens} ");
             Console.WriteLine($"Percentual de mulheres: {percentualMulheres}");
+            Console.Write($"A soma de todos os pesos é: {somaPesos}");
 
          }
 
