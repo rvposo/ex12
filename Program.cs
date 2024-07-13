@@ -36,7 +36,6 @@ class Program
 
             Console.WriteLine("Digite o seu sexo: 'M' ou 'F'");
             sexo = Console.ReadLine();
-            Console.WriteLine(sexo);
 
           if (sexo == "M")
           { 
@@ -48,8 +47,16 @@ class Program
           }
         }
 
+            double percentualHomens = (double)quantidadeHomens / (double)quantidadePessoas * 100;
+            double percentualMulheres = (double)quantidadeMulheres / (double)quantidadePessoas * 100;
+
+          
+         
+
             Console.WriteLine($"Quantidade de homens: {quantidadeHomens}");
             Console.WriteLine($"Quantidade de mulheres: {quantidadeMulheres}");
+            Console.WriteLine($"Percentual de homens: {percentualHomens} ");
+            Console.WriteLine($"Percentual de mulheres: {percentualMulheres}");
 
          }
 
